@@ -1,0 +1,49 @@
+<div class="hero-head">
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="../">
+            <img src="../images/bulma.png" alt="Logo">
+        </a>
+        <span class="navbar-burger burger" data-target="navbarMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+        </span>
+      </div>
+      <div id="navbarMenu" class="navbar-menu">
+        <div class="navbar-end">
+          <div class="tabs is-right">
+            <ul>
+              <% unless current_user.present? %>
+                <li class="is-active">
+                  <a class="button is-small is-info is-outlined">login</a>
+                </li>
+              <% else %>
+                <% if current_user.is_admin? %>
+                  <li><a href="">Moderate</a></li>
+                  <li><a href="">Configure</a></li>
+                <% end %>
+                <li class="is-active"><a>Home</a></li>
+                <div class="navbar-item has-dropdown is-hoverable">
+                  <a class="navbar-link">
+                    <%= current_user.name %>
+                  </a>
+                  <div class="navbar-dropdown">
+                    <a class="navbar-item">
+                      Profile
+                    </a>
+                    <hr class="navbar-divider">
+                    <div class="navbar-item">
+                      Logout
+                    </div>
+                  </div>
+                </div>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
