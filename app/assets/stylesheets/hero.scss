@@ -4,6 +4,7 @@ html,body {
 }
 .hero-body .container {
   max-width: 700px;
+  padding-top: .5rem;
 }
 .hero-body .title {
   color: hsl(192,17%,99%) !important;
@@ -12,6 +13,9 @@ html,body {
   color: hsl(192,17%,99%) !important;
   padding-top: 2rem;
   line-height: 1.5;
+}
+.section {
+  padding: 1rem 1.5rem;
 }
 .features {
   padding: 5rem 0;
