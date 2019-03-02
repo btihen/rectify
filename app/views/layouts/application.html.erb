@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+
+    <link rel="shortcut icon" href="../images/fav_icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <!-- Bulma Version 0.7.4-->
+    <link rel="stylesheet" type="text/css" href="../css/hero.css">
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
+    <link rel="stylesheet" type="text/css" href="../css/cards.css">
+    <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.7.4/css/bulma.min.css" />
+
+    <%# stylesheet_link_tag    "application" %>
+    <%# javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <style type="text/css">
+      html,
+      body { font-family: 'Open Sans';
+             background: #F8F8F8; }
+      img  { padding: 5px;
+             border: 1px solid #ccc; }
+    </style>
+
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <section class="hero is-fullheight is-default">
+
+      <%= render 'layouts/header' %>
+
+      <div class="hero-body">
+        <div class="container has-text-centered">
+
+        <%= yield %>
+
+        </div>
+      </div>
+
+      <%= render 'layouts/footer' %>
+
+    </section>
+    
+    <!-- https://www.adam-bray.com/2018/04/03/responsive-bulma-css-navigation-bar/ -->
+    <script>
+      (function() {
+        var burger = document.querySelector('.burger');
+        var nav = document.querySelector('#'+burger.dataset.target);
+
+        burger.addEventListener('click', function(){
+          burger.classList.toggle('is-active');
+          nav.classList.toggle('is-active');
+        });
+      })();
+    </script>
+    <script async type="text/javascript" src="../js/bulma.js"></script>
+  </body>
+</html>
