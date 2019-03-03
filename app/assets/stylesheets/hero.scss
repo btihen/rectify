@@ -4,7 +4,6 @@ html,body {
 }
 .hero-body .container {
   max-width: 700px;
-  padding-top: .5rem;
 }
 .hero-body .title {
   color: hsl(192,17%,99%) !important;
@@ -56,17 +55,17 @@ html,body {
   flex-direction: column;
 }
 .is-shady {
-animation: flyintoright .4s backwards;
-background: #fff;
-box-shadow: rgba(0, 0, 0, .1) 0 1px 0;
-border-radius: 4px;
-display: inline-block;
-margin: 10px;
-position: relative;
-transition: all .2s ease-in-out;
+  animation: flyintoright .4s backwards;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, .1) 0 1px 0;
+  border-radius: 4px;
+  display: inline-block;
+  margin: 10px;
+  position: relative;
+  transition: all .2s ease-in-out;
 }
 .is-shady:hover {
-box-shadow: 0 10px 16px rgba(0, 0, 0, .13), 0 6px 6px rgba(0, 0, 0, .19);
+  box-shadow: 0 10px 16px rgba(0, 0, 0, .13), 0 6px 6px rgba(0, 0, 0, .19);
 }
 /*adds font awesome stars*/
 footer li:before {

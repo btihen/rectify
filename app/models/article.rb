@@ -1,5 +1,5 @@
-class Story < ApplicationRecord
-  belongs_to :user
+class Article < ApplicationRecord
+  belongs_to :user,     optional: true # temp for demo
   belongs_to :category, optional: true
 
   validates  :title,    presence: true

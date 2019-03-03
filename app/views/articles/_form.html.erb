@@ -1,0 +1,56 @@
+<!--
+  devise/new.html.erb
+-->
+<!--
+  https://github.com/dansup/bulma-templates/blob/master/templates/login.html
+-->
+  <div class="box">
+    <form>
+
+      <div class="field">
+        <label class="label">Category</label>
+        <div class="control">
+          <div class="select">
+            <select>
+              <option>Select dropdown</option>
+              <option>Uplifing</option>
+              <option>Apology</option>
+              <option>Abuse</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Title</label>
+        <div class="control">
+          <input class="input is-large" type="text" placeholder="Article Title" autofocus="">
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Article</label>
+        <div class="control">
+          <textarea class="textarea" rows="10" placeholder="Write your article here"></textarea>
+        </div>
+      </div>
+
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-block is-info is-medium">
+            <a href="/articles/1" class="button is-info">
+              Submit
+            </a>
+          </button>
+        </div>
+        <div class="control">
+          <button class="button is-text is-medium">
+            <a href="/articles">
+              Cancel
+            </a>
+          </button>
+        </div>
+      </div>
+
+    </form>
+  </div>

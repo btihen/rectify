@@ -1,6 +1,6 @@
 # README
 
-A way to share stories and create trust & harmony
+A way to share articles and create trust & harmony
 
 Things you may want to cover:
 
