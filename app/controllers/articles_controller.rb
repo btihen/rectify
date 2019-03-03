@@ -4,21 +4,42 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.all
+    # @articles = Article.all
+
+    find(params[:find])     if params[:find].present?
+    return                  if performed?
+
+    search(params[:search]) if params[:search].present?
+    return                  if performed?
+
+    render 'articles/index'
+  end
+
+  def find(_)
+    # @articles = Article.mine
+    render 'articles/my_articles'
+  end
+
+  def search(_)
+    # @articles = Article.mine
+    render 'articles/search'
   end
 
   # GET /articles/1
   # GET /articles/1.json
   def show
+  render 'articles/show'
   end
 
   # GET /articles/new
   def new
     @article = Article.new
+    render 'articles/new'
   end
 
   # GET /articles/1/edit
   def edit
+    render 'articles/edit'
   end
 
   # POST /articles

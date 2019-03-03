@@ -56,24 +56,25 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # My Gems
 ##########
+group :development, :test do
+  # debugging
+  gem 'pry-rails'
+  gem 'pry-byebug'
 
-# use rspec
-gem 'rspec-rails'
-# bundle install 
-# rails generate rspec:install
+  gem 'factory_bot_rails', '~> 4.10'
+  gem 'faker', '~> 1.8'
 
-# foundation css component framework
-# gem 'foundation-rails'
-# gem 'autoprefixer-rails'
-# bundle install
-# rails g foundation:install
+  gem 'rspec-rails', '~> 3.7'
+  # bundle install
+  # rails generate rspec:install
+end
 
 gem "bulma-rails", "~> 0.7.4"
 # app/application.scss:
 # @import "bulma";
 
 # create landing page
-# rails g controller_scaffold landing 
+# rails g controller_scaffold landing
 # root to: 'landing#index'
 
 # use devise for auth
