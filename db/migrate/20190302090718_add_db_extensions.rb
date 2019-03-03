@@ -1,4 +1,4 @@
-class AddDbExtensions < ActiveRecord::Migration[6.0]
+class AddDbExtensions < ActiveRecord::Migration[5.2]
   def change
     enable_extension 'citext'
     enable_extension 'unaccent'
